@@ -40,7 +40,6 @@ class GCN(torch.nn.Module):
         super(GCN, self).__init__()
 
         self.convs = torch.nn.ModuleList()
-        self.bns = torch.nn.ModuleList()
         self.inProj = torch.nn.Linear(in_channels, hidden_channels)
         for _ in range(num_layers):
             self.convs.append(GCNConv(hidden_channels, hidden_channels))
