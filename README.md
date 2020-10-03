@@ -1,11 +1,14 @@
-# ogb_ddi
-A simple baseline for OGBL DDI
+# Simple OGB baselines
+Improving upon the existing OGB baselines with basic techniques. :)
 
-Adds JKnet style connections + trains for 500 epochs (instead of the default 200)
+# ogbl_ddi
+Adds JKnet style connections to basic GCN + trains for 500 epochs (instead of the default 200)
 
 Hyperparameters chosen are the ones set by default.
 
 ```
+python gnn.py
+------------
 Hits@10
 All runs:
 Highest Train: 73.28 ± 1.71
@@ -25,3 +28,17 @@ Highest Valid: 69.31 ± 0.78
   Final Train: 78.85 ± 0.91
    Final Test: 73.71 ± 9.19
 ```
+
+# ogbn_arxiv
+Adds JKNet style residuals, GCNII style residuals, and also concatenates node2vec embeddings.
+
+```
+python node2vec.py --batch_size 128
+python gnn.py --use_node_embedding --num_layers 2
+
+Highest Train: 86.95 ± 0.21
+Highest Valid: 74.14 ± 0.08
+Final Train: 81.86 ± 1.36
+Final Test: 72.78 ± 0.13
+```
+
