@@ -25,11 +25,12 @@ Hits@30
 All runs:
 Highest Train: 78.85 ± 0.91
 Highest Valid: 69.31 ± 0.78
-  Final Train: 78.85 ± 0.91
-   Final Test: 73.71 ± 9.19
+Final Train: 78.85 ± 0.91
+Final Test: 73.71 ± 9.19
 ```
 
 # ogbn_arxiv
+## Submission 1
 Adds JKNet style residuals, GCNII style residuals, and also concatenates node2vec embeddings.
 
 ```
@@ -40,5 +41,16 @@ Highest Train: 86.95 ± 0.21
 Highest Valid: 74.14 ± 0.08
 Final Train: 81.86 ± 1.36
 Final Test: 72.78 ± 0.13
+```
+
+## Submission 2
+Adds JKNet style residuals, GCNII style residuals, and uses 6 layers.
+```
+python gnn.py  --num_layers 6 --hidden_channels 128 --epochs 500
+
+Highest Train: 78.01 ± 0.10
+Highest Valid: 73.82 ± 0.07
+Final Train: 77.64 ± 0.29
+Final Test: 72.86 ± 0.16
 ```
 
