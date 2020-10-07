@@ -5,6 +5,7 @@ from tqdm import tqdm
 import torch.nn.functional as F
 
 from torch_geometric.data import ClusterData, ClusterLoader, NeighborSampler
+from torch_geometric.nn import SAGEConv
 from torch_geometric.utils import to_undirected
 from torch_sparse import SparseTensor
 import numpy as np
