@@ -54,3 +54,17 @@ Final Train: 77.64 ± 0.29
 Final Test: 72.86 ± 0.16
 ```
 
+# ogbn_products
+Adds GCNII style residuals and uses 3 layers. Interestingly, these improvements improve ClusterGCN but not GraphSAINT. :/
+
+```
+python cluster_gcn.py --num_layers 3
+
+All runs:
+Highest Train: 93.69 ± 0.06
+Highest Valid: 91.88 ± 0.08
+Final Train: 93.53 ± 0.12
+Final Test: 79.71 ± 0.42
+```
+
+
